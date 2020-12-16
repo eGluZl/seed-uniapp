@@ -16,5 +16,7 @@ export default G => ({
     'debug': true,
     'theme_color': '#FFA700',
     'app_name': '',
+    'web_socket_url': '',
+    'img_base_url':''
   }
 })

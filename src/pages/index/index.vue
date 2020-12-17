@@ -1,8 +1,9 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
 		<view>
 			<text class="title">{{title}}</text>
+      <view class="cu-btn" @tap.stop="toA">page A</view>
+      <view class="cu-btn" @tap.stop="toB">page B</view>
 		</view>
 	</view>
 </template>
@@ -11,14 +12,22 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello-index'
 			}
 		},
 		onLoad() {
 
+
 		},
 		methods: {
-
+      toA(){
+        this._$router.push(this.$routers.A)
+      },
+      toB(){
+        this._$router.push(this.$routers.B, {
+          source: 'index'
+        })
+      },
 		}
 	}
 </script>
@@ -29,12 +38,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
 	}
 
 	.text-area {

@@ -9,9 +9,9 @@ module.exports = {
                 'Vue': ['vue', 'default'],
                 'G': [path.resolve(path.join(__dirname, 'src', 'G', 'index.js')), 'default'],
             }),
-            new webpack.ProgressPlugin(percentage => {
-                percentage === 1 ? console.log('编译完成：100.00%') : console.log(`编译进度：${(percentage * 100).toFixed(2)}%`)
-            })
+            // new webpack.ProgressPlugin(percentage => {
+            //     percentage === 1 ? console.log('编译完成：100.00%') : console.log(`编译进度：${(percentage * 100).toFixed(2)}%`)
+            // })
         ]
     },
     chainWebpack: config => {

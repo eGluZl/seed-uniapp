@@ -17,6 +17,7 @@ export default G => ({
     'theme_color': '#FFA700',
     'app_name': '',
     'web_socket_url': '',
-    'img_base_url':''
+    'img_base_url':'',
+    'qq_map_key': '',
   }
 })

@@ -1,4 +1,6 @@
-@import "./static/style/app";
+@function upx($value) {
+  @return $value * 1upx;
+}
 /**
  * 这里是uni-app内置的常用样式变量
  *

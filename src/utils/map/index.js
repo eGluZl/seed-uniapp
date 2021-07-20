@@ -1,5 +1,5 @@
-import G from '@/G';
-import {SET_LOCATION_INFO} from '@/store/mutation-types'
+import G from '@/G'
+import { SET_LOCATION_INFO } from '@/store/mutation-types'
 
 //#ifdef MP-WEIXIN
 import QQMapWX from './qqmap-wx-jssdk.min'
@@ -10,7 +10,7 @@ const qqMap = new QQMapWX({
 
 //#endif
 
-export function reverseGeoCoder(lat, lng) {
+export function reverseGeoCoder (lat, lng) {
   return new Promise((resolve, reject) => {
     //#ifdef MP-WEIXIN
     qqMap.reverseGeocoder({
@@ -29,7 +29,7 @@ export function reverseGeoCoder(lat, lng) {
   })
 }
 
-export function calculateDistance(start, end, mode) {
+export function calculateDistance (start, end, mode) {
   return new Promise((resolve, reject) => {
     if (!end) {
       reject('end not found')
@@ -40,10 +40,10 @@ export function calculateDistance(start, end, mode) {
       from: start || '',
       to: end,
       mode: mode || 'walking',
-      success(res) {
+      success (res) {
         resolve(res)
       },
-      fail(err) {
+      fail (err) {
         reject(err)
       },
     })
@@ -51,7 +51,7 @@ export function calculateDistance(start, end, mode) {
   })
 }
 
-export function pickLocation() {
+export function pickLocation () {
   //#ifdef MP-WEIXIN
   uni.navigateTo({
     url: `plugin://chooseLocation/index?key=${G._ns_config.qq_map_key}&referer=${G._ns_config.app_name}`
@@ -59,11 +59,11 @@ export function pickLocation() {
   //#endif
 }
 
-export function getLocation() {
+export function getLocation () {
   return new Promise((resolve, reject) => {
     uni.getLocation({
       type: 'gcj02', geocode: true,
-      success(res) {
+      success (res) {
         const lat = res.latitude
         const lng = res.longitude
         //#ifdef MP-WEIXIN
@@ -81,7 +81,7 @@ export function getLocation() {
         })
         //#endif
       },
-      fail(err) {
+      fail (err) {
         reject(err)
       }
     })
@@ -89,16 +89,16 @@ export function getLocation() {
 
 }
 
-export function direction(mode, to) {
+export function direction (mode, to) {
   return new Promise((resolve, reject) => {
     //#ifdef MP-WEIXIN
     qqMap.direction({
       mode: mode || 'walking',
       to,
-      success(res) {
+      success (res) {
         resolve(res)
       },
-      fail(err) {
+      fail (err) {
         reject(err)
       }
     })

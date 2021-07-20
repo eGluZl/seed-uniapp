@@ -12,6 +12,8 @@ import dayjs from "dayjs";
 import duration from 'dayjs/plugin/duration'
 import isBetween from 'dayjs/plugin/isBetween'
 import * as map from '@/utils/map/index'
+import uView from "uview-ui";
+Vue.use(uView);
 
 dayjs.extend(duration)
 dayjs.extend(isBetween)

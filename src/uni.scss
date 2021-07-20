@@ -1,5 +1,5 @@
-@function upx($value) {
-  @return $value * 1upx;
+@function rpx($value) {
+  @return $value * 1rpx;
 }
 /**
  * 这里是uni-app内置的常用样式变量

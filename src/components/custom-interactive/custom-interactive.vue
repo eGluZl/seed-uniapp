@@ -63,8 +63,8 @@ export default {
     }
 
     .loading-img {
-      width: 200upx;
-      height: 200upx;
+      width: 200rpx;
+      height: 200rpx;
     }
   }
 }

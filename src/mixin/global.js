@@ -9,9 +9,6 @@ export default {
     }
   },
   computed: {
-    upx2px() {
-      return (upx) => uni.upx2px(upx)
-    },
     getImageURL() {
       return (url) => {
         if (url && url.length > 0) {

@@ -64,7 +64,8 @@
     "sass-loader": "^10.1.0",
     "vue": "^2.6.11",
     "vuex": "^3.6.0",
-    "webpack": "^4.44.2"
+    "webpack": "^4.44.2",
+    "uview-ui": "^1.8.3"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.0.18",
@@ -81,7 +82,6 @@
     "@vue/cli-plugin-babel": "^4.5.9",
     "@vue/cli-service": "^4.5.9",
     "babel-plugin-import": "^1.13.3",
-    "blueimp-md5": "^2.18.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
     "mini-types": "*",

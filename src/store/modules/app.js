@@ -8,6 +8,7 @@ export default {
     token: null,
     isLogin: false,
     locationInfo: {},
+    navBarHeight: uni.getSystemInfoSync().platform === 'ios' ? 86 : 64,
   },
   mutations: {
     SET_LOGGED (state) {
@@ -21,7 +22,10 @@ export default {
     },
     SET_LOCATION_INFO (state, payload) {
       state.token = payload
-    }
+    },
+    SET_NAV_BAR_HEIGHT(state, payload){
+      state.navBarHeight = payload
+    },
   },
   actions: {
     login ({ commit }, params) {

@@ -1,4 +1,5 @@
 import G from '@/G'
+import { SET_NAV_BAR_HEIGHT } from '@/store/mutation-types'
 
 export default {
   data() {
@@ -28,13 +29,18 @@ export default {
   },
   onLoad() {
     const that = this
-    uni.createSelectorQuery().select('.uni-navbar').fields({size: true}, (res) => {
+    uni.createSelectorQuery().select('.global-navbar').fields({ size: true }, (res) => {
       if (res == null) {
-        that.navBarHeight = 64
+        that.navBarHeight = G.$store.state.app.navBarHeight
       } else {
-        that.navBarHeight = res.height
+        if (res.height === 0) {
+          that.navBarHeight = G.$store.state.app.navBarHeight
+        } else {
+          that.navBarHeight = res.height
+          G.$store.commit(SET_NAV_BAR_HEIGHT, res.height)
+        }
       }
-    }).exec();
+    }).exec()
   },
   onReady() {
     this.getIcons()

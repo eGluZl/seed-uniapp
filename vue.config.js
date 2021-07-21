@@ -13,7 +13,8 @@ module.exports = {
             options.compiler.compile = (template, ...args) => {
                 if (args[0].resourcePath.match(/^pages/)) {
                     template = template.replace(/[\s\S]+?<[\d\D]+?>/, _ => `${_}
-						<custom-interactive ref="custom-interactive" style="position: fixed; z-index: 123;" />
+						<custom-interactive ref="custom-interactive" style="position: fixed; z-index: 123;" />						
+						<u-toast ref="uToast" />
 					`)
                 }
                 return compile(template, ...args)

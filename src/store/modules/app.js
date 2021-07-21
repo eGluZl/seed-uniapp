@@ -9,6 +9,8 @@ export default {
     isLogin: false,
     locationInfo: {},
     navBarHeight: uni.getSystemInfoSync().platform === 'ios' ? 86 : 64,
+
+    query: 2,
   },
   mutations: {
     SET_LOGGED (state) {
@@ -25,6 +27,9 @@ export default {
     },
     SET_NAV_BAR_HEIGHT(state, payload){
       state.navBarHeight = payload
+    },
+    SET_QUERY (state, payload) {
+      state.query = payload
     },
   },
   actions: {

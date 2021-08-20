@@ -62,10 +62,10 @@
     "node-sass": "^5.0.0",
     "regenerator-runtime": "^0.12.1",
     "sass-loader": "^10.1.0",
+    "uview-ui": "^1.8.3",
     "vue": "^2.6.11",
     "vuex": "^3.6.0",
-    "webpack": "^4.44.2",
-    "uview-ui": "^1.8.3"
+    "webpack": "^4.44.2"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.0.18",

@@ -1,5 +1,8 @@
 <template>
 	<view class="content">
+    <u-navbar class="global-navbar" :is-back="false" :title="title" :border-bottom="false">
+      <view class="slot-wrap"></view>
+    </u-navbar>
 		<view>
 			<text class="title">{{title}}</text>
       <view class="cu-btn" @tap.stop="toA">page A</view>

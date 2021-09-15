@@ -15,6 +15,6 @@ export default G => ({
     'app_name': '',
     'web_socket_url': '',
     'img_base_url':'',
-    'qq_map_key': '',
+    'qq_map_key': '7EABZ-ZN3WD-7AU4L-PJ4W4-5EOZF-4YBK7',
   }
 })

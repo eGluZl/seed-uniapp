@@ -1,7 +1,7 @@
 import Vue from 'vue' //引入 Vue
 import Vuex from 'vuex' //引入 Vuex
 import createLogger from 'vuex/dist/logger'
-import G from '@/G'
+
 
 Vue.use(Vuex)
 
@@ -16,5 +16,5 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
 
 export default new Vuex.Store({
   modules,
-  plugins: G._ns_config.debug ? [createLogger()] : []
+  plugins: [createLogger()]
 })

@@ -16,8 +16,6 @@
 			}
 		},
 		onLoad() {
-
-
 		},
 		methods: {
       toA(){

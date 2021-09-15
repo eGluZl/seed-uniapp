@@ -41,4 +41,15 @@ export default G => ({
     if (!(this instanceof Vue)) return
     this.$refs['custom-interactive']['_$loading']()
   },
+  $uToast(that, options){
+    if (!(that instanceof Vue)) {
+      return
+    }
+    if(that.$refs['uToast'] == null){
+      return
+    }
+    uni.hideLoading()
+    uni.hideToast()
+    that.$refs['uToast'].show(options)
+  },
 })

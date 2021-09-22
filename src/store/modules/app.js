@@ -35,7 +35,8 @@ export default {
   actions: {
     login ({ commit }, params) {
       return G.$request(_API_Login(params)).then(res => {
-        const token = res.token ? res.token : ''
+        const data = res.data
+        const token = data.token ? data.token : ''
         if (token !== '') {
           commit(SET_TOKEN, token)
           commit(SET_LOGGED)

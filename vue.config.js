@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack')
 module.exports = {
     configureWebpack:{
         resolve: {
@@ -6,6 +7,13 @@ module.exports = {
                 '@': resolve('src')
             }
         },
+        plugins: [
+            new webpack.ProvidePlugin({
+                'Vue': ['vue', 'default'],
+                'G': [path.resolve(path.join(__dirname, 'src', 'G', 'index.js')), 'default'],
+            }),
+
+        ],
     },
     chainWebpack: config => {
         config.module.rule('vue').use('vue-loader').loader('vue-loader').tap(options => {
